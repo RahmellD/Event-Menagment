@@ -20,4 +20,12 @@ This is a simple Task Management System built with JavaScript, Node.js, Express.
 - **Database:**
   -  MySQL
 
+## Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/RahmellD/Project-4.git
+   cd task-management
+   npm install
+2. I also added env file for database url
 
