@@ -1,5 +1,5 @@
-const nodemailer = require('nodemailer');
-const { PrismaClient } = require('@prisma/client');
+import nodemailer from 'nodemailer';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -22,7 +22,7 @@ async function sendEmails() {
                     from: 'rameldili1@gmail.com',
                     to: user.email,
                     subject: `Event: ${event.title}`,
-                    text: `Dear ${user.first_name},\n\nEvent Details:\nDescription: ${event.description}\nStart Date: ${event.start_date}\nEnd Date: ${event.end_date}\n\nRegards,\nEvents System`
+                    text: `Dear ${user.first_name},\n\nEvent Details:\nDescription: ${event.description}\nStart Date: ${event.start_date}\nEnd Date: ${event.end_date}\n\nRegards,\nEvent MEnagment System`
                 };
 
                 await transporter.sendMail(mailOptions);
