@@ -22,7 +22,7 @@ async function sendEmails() {
                     from: 'rameldili1@gmail.com',
                     to: user.email,
                     subject: `Event: ${event.title}`,
-                    text: `Dear ${user.first_name},\n\nEvent Details:\nDescription: ${event.description}\nStart Date: ${event.startDate}\nEnd Date: ${event.endDate}\n\nRegards,\nEvents System`
+                    text: `Dear ${user.first_name},\n\nEvent Details:\nDescription: ${event.description}\nStart Date: ${event.start_date}\nEnd Date: ${event.end_date}\n\nRegards,\nEvents System`
                 };
 
                 await transporter.sendMail(mailOptions);
