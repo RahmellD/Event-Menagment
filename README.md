@@ -25,7 +25,9 @@ This is a simple Task Management System built with JavaScript, Node.js, Express.
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/RahmellD/Project-4.git
-   cd task-management
-   npm install
-2. I also added env file for database url
+   cd task management
 
+2. **After you are in task menagment folder in terminal install packages:**
+     ```
+    npm install
+3. **I aslo added .env file** 
