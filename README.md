@@ -30,4 +30,4 @@ This is a simple Task Management System built with JavaScript, Node.js, Express.
 2. **After you are in task menagment folder in terminal install packages:**
      ```
     npm install
-3. **I aslo added .env file** 
+
