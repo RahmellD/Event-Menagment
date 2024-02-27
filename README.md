@@ -1,14 +1,14 @@
-# Task Management System
+# Event Management System
 
 ## Overview
 
-This is a simple Task Management System built with JavaScript, Node.js, Express.js, and Prisma database. The system allows users to manage tasks by creating, updating, and deleting them.
+This is a simple Event Management System built with JavaScript, Node.js, Express.js, and Prisma database. The system allows users to manage tasks by creating, updating, and deleting them.
 
 ## Features
 
-- **Task Management:** Create, update, and delete tasks.
+- **Event Management:** Create, update, and delete events.
 - **Database Integration:** Utilizes Prisma as the database ORM for seamless interaction with the database.
-- **RESTful API:** Implements RESTful APIs for task management operations.
+- **RESTful API:** Implements RESTful APIs for event management operations.
 
 ## Tech Stack
 
@@ -25,9 +25,9 @@ This is a simple Task Management System built with JavaScript, Node.js, Express.
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/RahmellD/Project-4.git
-   cd task management
+   cd event management
 
-2. **After you are in task menagment folder in terminal install packages:**
+2. **After you are in event menagment folder in terminal install packages:**
      ```
     npm install
 
