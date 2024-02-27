@@ -17,9 +17,10 @@ model User {
   email      String
   password   String
   phone      String
+  eventId    Int
+  event      Event    @relation(fields: [eventId], references: [id])
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
-  Event      Event[]
 }
 
 model Event {
@@ -34,7 +35,7 @@ model Event {
   max_participants   Int
   image_url          String
   userId             Int
-  user               User     @relation(fields: [userId], references: [id])
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
+  User               User[]
 }

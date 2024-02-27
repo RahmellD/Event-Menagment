@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 const createEvent = async (req, res) => {
     try {
         const { title, description, location, start_date, end_date,
-            start_registration, end_registration, max_participants, image_url, userId } = req.body
+            start_registration, end_registration, max_participants, image_url } = req.body
         const event = await prisma.event.create({
             data: {
                 title,
@@ -17,7 +17,6 @@ const createEvent = async (req, res) => {
                 end_registration,
                 image_url,
                 max_participants,
-                userId
             },
         });
         res.json(event)
@@ -136,4 +135,28 @@ const getEventUser = async (req, res) => {
 }
 
 
-module.exports = { createEvent, getUserEvents, deleteEvent, updateEvent, getEvents, getUserEvents, getEventUser }
+const addUsersToEvent = async (req, res) => {
+    try {
+        const { userIds } = req.body;
+        const userIdsInt = userIds.map(userId => parseInt(userId));
+        const event = await prisma.event.update({
+            where: {
+                id: parseInt(req.params.id)
+            },
+
+            data: {
+                user: {
+                    connect: userIdsInt.map(userId => ({ id: userId }))
+                }
+
+            },
+
+        });
+        res.json(event)
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal server error!");
+    }
+}
+
+module.exports = { createEvent, getUserEvents, deleteEvent, updateEvent, getEvents, getUserEvents, getEventUser, addUsersToEvent }
